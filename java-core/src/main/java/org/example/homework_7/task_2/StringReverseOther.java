@@ -1,6 +1,6 @@
 package org.example.homework_7.task_2;
 
-import static homework_7.task_2.StringReverse_1.reverseString;
+import static org.example.homework_7.task_2.StringReverse_1.reverseString;
 
 public class StringReverseOther {
 

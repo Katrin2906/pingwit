@@ -1,7 +1,6 @@
 package org.example.homework_7.task_4;
 
-
-import static homework_7.task_4.Counter.validator;
+import static org.example.homework_7.task_4.Counter.validator;
 
 public class FindWords {
     public static void main(String[] args) {

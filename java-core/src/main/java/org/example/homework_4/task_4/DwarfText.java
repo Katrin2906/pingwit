@@ -1,6 +1,6 @@
 package org.example.homework_4.task_4;
 
-import homework_4.task_1.Dwarfs;
+import org.example.homework_4.task_1.Dwarfs;
 
 public class DwarfText {
     public static void main(String[] args) {
@@ -10,5 +10,4 @@ public class DwarfText {
         balin.printText();
         bombur.printText();
     }
-
 }

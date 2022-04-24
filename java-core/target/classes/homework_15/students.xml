@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<students>
+    <student id="1">
+        <groupNumber>117</groupNumber>
+        <name>Alice</name>
+        <surname>NextDoor</surname>
+        <faculty>sociology</faculty>
+    </student>
+    <student id="2">
+        <groupNumber>136</groupNumber>
+        <name>Annie</name>
+        <surname>Hall</surname>
+        <faculty>singing</faculty>
+    </student>
+    <student id="3">
+        <groupNumber>148</groupNumber>
+        <name>Rosemary</name>
+        <surname>Woodhouse</surname>
+        <faculty>demonology</faculty>
+    </student>
+</students>

@@ -1,13 +1,13 @@
 package org.example.homework_6.task_3;
 
-import homework_6.task_3.Monkeys.Monkey;
-import homework_6.task_3.Monkeys.MonkeyManager;
-import homework_6.task_3.Monkeys.SmartMonkey;
-import homework_6.task_3.Monkeys.StupidMonkey;
-import homework_6.task_3.Trees.Branch;
-import homework_6.task_3.Trees.FruitBranch;
-import homework_6.task_3.Trees.FruitType;
-import homework_6.task_3.Trees.Tree;
+import org.example.homework_6.task_3.Monkeys.Monkey;
+import org.example.homework_6.task_3.Monkeys.MonkeyManager;
+import org.example.homework_6.task_3.Monkeys.SmartMonkey;
+import org.example.homework_6.task_3.Monkeys.StupidMonkey;
+import org.example.homework_6.task_3.Trees.Branch;
+import org.example.homework_6.task_3.Trees.FruitBranch;
+import org.example.homework_6.task_3.Trees.FruitType;
+import org.example.homework_6.task_3.Trees.Tree;
 
 import java.util.concurrent.ThreadLocalRandom;
 

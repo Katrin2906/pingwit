@@ -41,9 +41,9 @@ public class Garages<T> {
     public static void main(String[] args) {
         Bmw[] bmws = {new Bmw("X5")};
 
-        Garage<Bmw> garage = new Garage<>(bmws);
+     //   Garage<Bmw> garage = new Garage<>(bmws);
 
-        garage.cars()[0] = new Bmw("X3");
+     //   garage.cars()[0] = new Bmw("X3");
         /*
         garage.cars()[0] = new Lada("Granta"); - этот код не будет компилироваться, т.к. в твоем гараже генериком указаны Bmw
         
@@ -68,7 +68,7 @@ public class Garages<T> {
 
     }
 
-}
 
-}
+
+
 

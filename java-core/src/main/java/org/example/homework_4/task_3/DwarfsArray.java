@@ -1,6 +1,6 @@
 package org.example.homework_4.task_3;
 
-import homework_4.task_1.Dwarfs;
+import org.example.homework_4.task_1.Dwarfs;
 
 public class DwarfsArray {
     public static void main(String[] args) {

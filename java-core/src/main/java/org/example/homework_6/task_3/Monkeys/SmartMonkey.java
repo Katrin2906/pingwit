@@ -1,6 +1,6 @@
 package org.example.homework_6.task_3.Monkeys;
 
-import homework_6.task_3.Trees.Branch;
+import org.example.homework_6.task_3.Trees.Branch;
 
 public class SmartMonkey implements Monkey {
 
