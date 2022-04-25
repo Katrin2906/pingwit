@@ -18,7 +18,7 @@ public class DOMParser {
         Document document =
                 builder.parse(
                         ClassLoader.getSystemResourceAsStream("homework_15/students.xml"));
-        List<Students> empList = new ArrayList<>();
+        List<Students> empList = new ArrayList<>(); // empList - так вроде бы я называл поле, но там были Employee и название было более менее оправданно, в твоем случае там студенты
         NodeList nodeList = document.getDocumentElement().getChildNodes();
 
         for (int i = 0; i < nodeList.getLength(); i++) {
@@ -36,7 +36,7 @@ public class DOMParser {
                     if (cNode instanceof Element) {
                         String content = cNode.getLastChild().
                                 getTextContent().trim();
-                        switch (cNode.getNodeName()) {
+                        switch (cNode.getNodeName()) { // поскольку мы используем Java 17, то лучше использовать синтаксис оператора switch из Java 17
                             case "groupNumber":
                                 emp.groupNumber = content;
                                 break;
