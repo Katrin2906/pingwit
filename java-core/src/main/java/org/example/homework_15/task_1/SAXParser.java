@@ -13,8 +13,15 @@ public class SAXParser {
         SAXParserFactory parserFactor = SAXParserFactory.newInstance();
         javax.xml.parsers.SAXParser parser = parserFactor.newSAXParser();
         SAXHandler handler = new SAXHandler();
-        parser.parse(ClassLoader.getSystemResourceAsStream("homework_15/students.xml"),
+        parser.parse(ClassLoader.getSystemResourceAsStream("homework_15/students.xml"), // лучше либо в 1 строку, либо каждый аргумент с новой строки, ниже пример
                 handler);
+        
+        /*
+        parser.parse(ClassLoader.getSystemResourceAsStream(
+                "homework_15/students.xml"),
+                handler
+        );
+        */
 
         for (Students students : handler.empList) {
             System.out.println(students);
@@ -24,9 +31,9 @@ public class SAXParser {
 
 class SAXHandler extends DefaultHandler {
 
-    List<Students> empList = new ArrayList<>();
-    Students students = null;
-    String content = null;
+    List<Students> empList = new ArrayList<>(); // empList - так вроде бы я называл поле, но там были Employee и название было более менее оправданно, в твоем случае там студенты
+    Students students = null; // null можно не указывать, т.к. students при создании объекта будет null
+    String content = null; // null можно не указывать, т.к. content при создании объекта будет null
 
     @Override
 
@@ -35,6 +42,7 @@ class SAXHandler extends DefaultHandler {
             throws SAXException {
 
         switch (qName) {
+                // если полностью копируешь код, то проверяй его, у тебя нету класса Employee
             //Create a new Employee object when the start tag is found
             case "student":
                 students = new Students();
@@ -69,7 +77,7 @@ class SAXHandler extends DefaultHandler {
 
     @Override
     public void characters(char[] ch, int start, int length)
-            throws SAXException {
+            throws SAXException { // это должно быть на одной строке с описанием метода
         content = String.copyValueOf(ch, start, length).trim();
     }
 
