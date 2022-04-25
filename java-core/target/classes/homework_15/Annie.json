@@ -1,0 +1,13 @@
+[
+  {
+    "groupNumber": 136,
+    "name": "Alice",
+    "surname": "Nextdoor",
+    "faculty": "singing",
+    "favoriteClasses": [
+      "composition",
+      "solfeggio",
+      "chorus"
+    ]
+  }
+]

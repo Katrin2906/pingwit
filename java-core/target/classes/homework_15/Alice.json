@@ -1,0 +1,13 @@
+[
+  {
+    "groupNumber": 117,
+    "name": "Alice",
+    "surname": "Nextdoor",
+    "faculty": "sociology",
+    "favoriteClasses": [
+      "anthropology",
+      "psychology",
+      "conflictology"
+    ]
+  }
+]
