@@ -8,6 +8,8 @@ public class AllStudents {
 
     @JsonProperty("groupNumber")
     private String groupNumber;
+    @JsonProperty("id")
+    private String id;
     @JsonProperty("name")
     private String name;
     @JsonProperty("surname")
@@ -31,6 +33,14 @@ public class AllStudents {
 
     public void setGroupNumber(String groupNumber) {
         this.groupNumber = groupNumber;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -59,8 +69,9 @@ public class AllStudents {
 
     @Override
     public String toString() {
-        return "StudentsForJson{" +
+        return "AllStudents{" +
                 "groupNumber='" + groupNumber + '\'' +
+                ", id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", faculty='" + faculty + '\'' +
