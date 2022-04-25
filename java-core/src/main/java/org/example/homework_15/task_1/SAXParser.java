@@ -54,8 +54,8 @@ class SAXHandler extends DefaultHandler {
     @Override
     public void endElement(String uri, String localName,
                            String qName) throws SAXException {
-        switch (qName) {
-
+        switch (qName) { // поскольку мы используем Java 17, то лучше использовать синтаксис оператора switch из Java 17
+// лишняя строка
             case "student":
                 empList.add(students);
                 break;
