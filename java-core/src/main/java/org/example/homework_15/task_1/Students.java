@@ -1,6 +1,7 @@
 package org.example.homework_15.task_1;
 
-public class Students {
+public class Students { // Students -> Student - в ед. числе название класса должно быть
+    // ВСЕ поля класса должны быть приватными
     String id;
     String groupNumber;
     String name;
