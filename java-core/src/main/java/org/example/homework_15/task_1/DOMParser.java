@@ -18,16 +18,16 @@ public class DOMParser {
         Document document =
                 builder.parse(
                         ClassLoader.getSystemResourceAsStream("homework_15/students.xml"));
-        List<Students> empList = new ArrayList<>(); // empList - так вроде бы я называл поле, но там были Employee и название было более менее оправданно, в твоем случае там студенты
+        List<Student> studentsList = new ArrayList<>();
         NodeList nodeList = document.getDocumentElement().getChildNodes();
 
         for (int i = 0; i < nodeList.getLength(); i++) {
 
             Node node = nodeList.item(i);
             if (node instanceof Element) {
-                Students emp = new Students();
-                emp.id = node.getAttributes().
-                        getNamedItem("id").getNodeValue();
+                Student emp = new Student();
+                emp.setId(node.getAttributes().
+                        getNamedItem("id").getNodeValue());
 
                 NodeList childNodes = node.getChildNodes();
                 for (int j = 0; j < childNodes.getLength(); j++) {
@@ -36,31 +36,20 @@ public class DOMParser {
                     if (cNode instanceof Element) {
                         String content = cNode.getLastChild().
                                 getTextContent().trim();
-                        switch (cNode.getNodeName()) { // поскольку мы используем Java 17, то лучше использовать синтаксис оператора switch из Java 17
-                            case "groupNumber":
-                                emp.groupNumber = content;
-                                break;
-                            case "name":
-                                emp.name = content;
-                                break;
-                            case "surname":
-                                emp.surname = content;
-                                break;
-                            case "faculty":
-                                emp.faculty = content;
-                                break;
+                        switch (cNode.getNodeName()) {
+                            case "groupNumber" -> emp.setGroupNumber(content);
+                            case "name" -> emp.setName(content);
+                            case "surname" -> emp.setSurname(content);
+                            case "faculty" -> emp.setFaculty(content);
                         }
                     }
                 }
-                empList.add(emp);
+                studentsList.add(emp);
             }
-
         }
-
-        for (Students students : empList) {
+        for (Student students : studentsList) {
             System.out.println(students);
         }
-
     }
 }
 

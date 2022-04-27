@@ -12,7 +12,7 @@ public class AllStudentsToJson {
 
     public static <MergeJSON> void main(String[] args) throws IOException {
         // В метод Paths.get надо передавать путь к одному файлу, посмотри в дебаге что в себе хранит результат вызова метода Paths.get()
-        List<AllStudents> allStudents = new ObjectMapper().readValue(Paths.get("homework_15/Alice.json", "homework_15/Annie.json", "homework_15/Rosemary.json").toFile(),
+        List<AllStudents> allStudents = new ObjectMapper().readValue(Paths.get("homework_15/Alice.json").toFile(),
                 new TypeReference<List<AllStudents>>() {
                 });
         allStudents.forEach(System.out::println);

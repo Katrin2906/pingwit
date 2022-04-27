@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 public class AllStudents { // AllStudents - больше похоже на описание одного студента, а название говорит что все
-// лишняя строка
     @JsonProperty("groupNumber")
     private String groupNumber;
     @JsonProperty("id")
