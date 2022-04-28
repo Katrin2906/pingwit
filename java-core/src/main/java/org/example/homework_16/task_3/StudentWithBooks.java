@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class StudentWithBooks {
+// можно было сделать в виде record
+public class StudentWithBooks { // просто Student
     private String studentName;
     private List<Book> books;
 
