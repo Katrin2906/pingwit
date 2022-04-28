@@ -4,9 +4,9 @@ public class SleepingThreadMain {
     public static void main(String[] args) throws InterruptedException {
         Thread mainThread = new Thread();
         mainThread.start();
-        mainThread.join();
         SleepingThread sleepingThread = new SleepingThread();
         sleepingThread.start();
+        sleepingThread.join();
         System.out.println("Main thread is over");
     }
 }
