@@ -2,6 +2,7 @@ package org.example.homework_16.task_3;
 
 import java.util.Objects;
 
+// можно было сделать в виде record
 public class Book {
     private String bookName;
     private Integer publicationYear;
