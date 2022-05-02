@@ -1,6 +1,6 @@
 package org.example.homework_16.task_5;
 
-public class WebSide<WebsiteType> {
+public class WebSide<WebsiteType> { // generic точно не нужен, WebSide -> Website
     private String url;
     private WebsiteType type;
 

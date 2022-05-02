@@ -8,12 +8,12 @@ public class ToyDelivers {
 
     public void toyDeliverSynchronizedFirst() {
         synchronized (this) {
-            for (int i = 0; i < FIRST_DELIVER_TOYS; ++i)
+            for (int i = 0; i < FIRST_DELIVER_TOYS; ++i) // этот цикл должен был быть в объекте Runnable
                 ++deliver;
         }
     }
 
-    public void toyDeliverSynchronizedSecond() {
+    public void toyDeliverSynchronizedSecond() { // этот метод не нужен.
         synchronized (this) {
             for (int i = 0; i < SECOND_DELIVER_TOYS; ++i)
                 ++deliver;

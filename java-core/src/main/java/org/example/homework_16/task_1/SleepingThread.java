@@ -1,6 +1,6 @@
 package org.example.homework_16.task_1;
 
-public class SleepingThread extends Thread {
+public class SleepingThread extends Thread { // лучше использовать implements Runnable
     public void run() {
         System.out.println("Sleeping thread starts");
         for (int i = 0; i <= 20; i++) {
@@ -11,6 +11,6 @@ public class SleepingThread extends Thread {
                 e.printStackTrace();
             }
 
-        } System.out.println("Sleeping thread is over");
+        } System.out.println("Sleeping thread is over"); // с новой строки
     }
 }
