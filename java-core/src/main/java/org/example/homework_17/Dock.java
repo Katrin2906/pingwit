@@ -22,13 +22,13 @@ public class Dock {
 
         locker.lock();
         try {
-            while (waitingTime = BoatTypes.BIG_BOAT || waitingTime = BoatTypes.MIDDLE_BOAT || waitingTime = BoatTypes.LITTLE_BOAT) {
+           // while (waitingTime = BoatTypes.BIG_BOAT || waitingTime = BoatTypes.MIDDLE_BOAT || waitingTime = BoatTypes.LITTLE_BOAT) {
                 condition.await();
                 System.out.println("Full boat");
                 condition.signalAll();
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-}
+      //      }
+      //  } catch (InterruptedException e) {
+     //       e.printStackTrace();
+     //   }
+  //  }
+// }

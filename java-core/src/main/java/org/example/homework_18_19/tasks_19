@@ -1,0 +1,18 @@
+task 4:
+
+SELECT *
+FROM student
+INNER JOIN subject_id_student_id
+      ON student.primaryKey=subject_id_student_id.student_id
+INNER JOIN subject
+      ON subject.primaryKey=subject_id_student_id.subject_id
+      WHERE subject.name='Math';
+
+task 5:
+
+SELECT.count(*)st.name, subject_id_student_id.student_id,subject_id_student_id.subject_id, s.name
+FROM student st
+LEFT JOIN subject_id_student_id ON st.id=subject_id_student_id.student_id
+LEFT JOIN subject s ON subject_id_student_id.subject_id=s.id
+GROUP BY s.name
+ORDER BY s.name;
