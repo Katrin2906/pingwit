@@ -1,12 +1,17 @@
+// для тасок 3 и 4 в PgAdmin доступен SQL (вкладка SQL при создании таблицы),
+// который будет выполнен при нажатии кнопки создания. Его тоже можно было бы добавить сюда для проверки
+
 task 4:
 
 SELECT *
-FROM student
-INNER JOIN subject_id_student_id
-      ON student.primaryKey=subject_id_student_id.student_id
-INNER JOIN subject
-      ON subject.primaryKey=subject_id_student_id.subject_id
-      WHERE subject.name='Math';
+FROM student // FROM student s
+INNER JOIN subject_id_student_id // INNER JOIN subject_id_student_id ids
+      ON student.primaryKey=subject_id_student_id.student_id // ON s.primaryKey=ids.student_id
+INNER JOIN subject // INNER JOIN subject sub
+      ON subject.primaryKey=subject_id_student_id.subject_id // ON sub.primaryKey=ids.subject_id
+      WHERE sub.name='Math';
+
+// В таблице student колонка primaryKey должна была называться id, а PrimaryKey - это ее особенность
 
 task 5:
 
@@ -16,3 +21,9 @@ LEFT JOIN subject_id_student_id ON st.id=subject_id_student_id.student_id
 LEFT JOIN subject s ON subject_id_student_id.subject_id=s.id
 GROUP BY s.name
 ORDER BY s.name;
+
+
+// Решение
+SELECT sub.name, count(ids.subject_id) FROM subject sub LEFT JOIN  subject_id_student_id ids on sub.id = ids.subject_id
+GROUP BY sub.name
+ORDER BY count(ids.subject_id) DESC, sub.name;
