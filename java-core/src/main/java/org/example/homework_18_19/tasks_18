@@ -7,6 +7,8 @@ task 6:
 UPDATE student
 SET course='java-17' WHERE course='8';
 
+// в задании было содержащие 8, а не равные. Возможно неточное описание, но здесь лучше использовать  ...WHERE course LIKE '%8%'
+
 task 7:
 
 INSERT INTO student (name, age, course) VALUES ('Egorka',2,'java-17');
