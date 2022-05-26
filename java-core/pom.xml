@@ -15,7 +15,7 @@
     <name>java-core</name>
 
     <properties>
-        <jack.version>2.13.2</jack.version>
+        <jack.version>2.13.3</jack.version>
     </properties>
 
     <dependencies>
@@ -23,6 +23,24 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jack.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>nl.tritales.springrestdoc</groupId>
+            <artifactId>springrestdoc</artifactId>
+            <version>0.1.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.fworks</groupId>
+            <artifactId>simplerestdoc</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.spt-development</groupId>
+            <artifactId>spt-development-logging-spring</artifactId>
+            <version>2.0.4</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

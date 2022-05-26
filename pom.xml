@@ -10,6 +10,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>java-core</module>
+    <module>java-spring</module>
   </modules>
 
   <name>pingwit</name>
@@ -25,6 +26,24 @@
       <groupId>org.jsoup</groupId>
       <artifactId>jsoup</artifactId>
       <version>1.14.3</version>
+    </dependency>
+    <dependency>
+      <groupId>nl.tritales.springrestdoc</groupId>
+      <artifactId>springrestdoc</artifactId>
+      <version>0.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.fworks</groupId>
+      <artifactId>simplerestdoc</artifactId>
+      <version>1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.spt-development</groupId>
+      <artifactId>spt-development-logging-spring</artifactId>
+      <version>2.0.4</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
 
