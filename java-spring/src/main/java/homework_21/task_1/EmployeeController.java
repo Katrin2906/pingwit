@@ -28,6 +28,8 @@ public class EmployeeController {
                 .toList();
     }
 
+    // у тебя скорее всего упало приложение при запуске, т.к. два одинаковых енд поинта у метода getAll() и getAllNames()
+    // этот метод должен был фильтровать по имени + ratePerHour, а у тебя сортировка
     @GetMapping("/all")
     public List<Employee> getAllNames() {
         return EMPLOYEE_MAP.values().stream()
