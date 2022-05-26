@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
+// ендпоинта не хватает еще
 @Component
 public class UserConverter {
 
