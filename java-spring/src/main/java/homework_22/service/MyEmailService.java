@@ -5,7 +5,7 @@ import homework_22.property.MyEmailProperty;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MyEmailService {
+public class MyEmailService { // MyEmailService -> UserEmailService
 
     private final JavaMailSender javaMailSender;
     private final MyEmailProperty emailProperty;
