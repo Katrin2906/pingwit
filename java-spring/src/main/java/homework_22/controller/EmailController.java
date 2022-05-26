@@ -18,7 +18,7 @@ public class EmailController {
     }
 
     @PostMapping("/send")
-    public void sendEmail(@RequestBody MyEmailDto dto) {
+    public void sendEmail(@RequestBody MyEmailDto dto) { // MyEmailDto -> UserEmailDto
         emailService.sendEmail(dto);
     }
 
