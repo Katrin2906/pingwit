@@ -3,10 +3,11 @@ package pingwit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import pingwit.homework_22.property.MyEmailProperty;
+import pingwit.homework_22.property.UserEmailProperty;
 
 @SpringBootApplication
-@EnableConfigurationProperties({MyEmailProperty.class})
+@EnableConfigurationProperties({
+		UserEmailProperty.class})
 public class DemoApplication {
 
 	public static void main(String[] args) {

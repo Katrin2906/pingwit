@@ -1,25 +1,26 @@
 package pingwit.homework_22.controller;
 
-import pingwit.homework_22.dto.MyEmailDto;
-import pingwit.homework_22.service.MyEmailService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import pingwit.homework_22.dto.UserEmailDto;
+import pingwit.homework_22.service.UserEmailService;
 
 @RestController
 @RequestMapping("/email")
-public class EmailController {
+public class UserEmailController {
 
-    private final MyEmailService emailService;
+    private final UserEmailService emailService;
 
-    public EmailController(MyEmailService emailService) {
+    public UserEmailController(UserEmailService emailService) {
         this.emailService = emailService;
     }
 
     @PostMapping("/send")
-    public void sendEmail(@RequestBody MyEmailDto dto) { // MyEmailDto -> UserEmailDto
+    public void sendEmail(@RequestBody UserEmailDto dto) {
         emailService.sendEmail(dto);
     }
 
 }
+
