@@ -22,7 +22,7 @@ public class HouseService {
     public Long save(HouseDto dto) {
         House house = houseConverter.toLocal(dto);
         return houseRepository.save(house).getId();
-
+// лишняя строка
     }
 
     public List<HouseDto> findAllByHouseType(HouseType houseType) {
