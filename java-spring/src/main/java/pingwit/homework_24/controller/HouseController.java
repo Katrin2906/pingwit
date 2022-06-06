@@ -34,6 +34,7 @@ public class HouseController {
     }
 
     @GetMapping("/search")
+    // findAllByHouseType думаю название метода стоит сделать как и у сервиса
     public List<HouseDto> findAllByHouseType(@RequestParam HouseType houseType, @RequestParam List<Long> ids) {
         return houseService.findAllByHouseTypeAndIdIn(houseType, ids);
     }
