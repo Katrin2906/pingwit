@@ -1,4 +1,4 @@
-package pingwit.homework_24.entity;
+package pingwit.homework_24_and_25.entity;
 
 import javax.persistence.*;
 

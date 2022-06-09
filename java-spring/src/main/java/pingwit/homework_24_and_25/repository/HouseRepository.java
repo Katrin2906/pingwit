@@ -1,8 +1,8 @@
-package pingwit.homework_24.repository;
+package pingwit.homework_24_and_25.repository;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
-import pingwit.homework_24.entity.House;
-import pingwit.homework_24.entity.HouseType;
+import pingwit.homework_24_and_25.entity.House;
+import pingwit.homework_24_and_25.entity.HouseType;
 
 import java.util.List;
 

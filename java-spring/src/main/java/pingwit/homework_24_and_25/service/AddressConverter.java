@@ -1,8 +1,8 @@
-package pingwit.homework_24.service;
+package pingwit.homework_24_and_25.service;
 
 import org.springframework.stereotype.Component;
-import pingwit.homework_24.dto.AddressDto;
-import pingwit.homework_24.entity.Address;
+import pingwit.homework_24_and_25.dto.AddressDto;
+import pingwit.homework_24_and_25.entity.Address;
 
 @Component
 public class AddressConverter {

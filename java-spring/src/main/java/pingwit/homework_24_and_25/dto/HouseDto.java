@@ -1,6 +1,6 @@
-package pingwit.homework_24.dto;
+package pingwit.homework_24_and_25.dto;
 
-import pingwit.homework_24.entity.HouseType;
+import pingwit.homework_24_and_25.entity.HouseType;
 
 import java.util.List;
 

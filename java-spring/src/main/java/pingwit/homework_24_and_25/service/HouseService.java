@@ -1,10 +1,10 @@
-package pingwit.homework_24.service;
+package pingwit.homework_24_and_25.service;
 
 import org.springframework.stereotype.Service;
-import pingwit.homework_24.dto.HouseDto;
-import pingwit.homework_24.entity.House;
-import pingwit.homework_24.entity.HouseType;
-import pingwit.homework_24.repository.HouseRepository;
+import pingwit.homework_24_and_25.dto.HouseDto;
+import pingwit.homework_24_and_25.entity.House;
+import pingwit.homework_24_and_25.entity.HouseType;
+import pingwit.homework_24_and_25.repository.HouseRepository;
 
 import java.util.List;
 

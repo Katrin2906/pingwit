@@ -1,10 +1,9 @@
-package pingwit.homework_24.controller;
+package pingwit.homework_24_and_25.controller;
 
 import org.springframework.web.bind.annotation.*;
-import pingwit.homework_24.dto.HouseDto;
-import pingwit.homework_24.entity.House;
-import pingwit.homework_24.entity.HouseType;
-import pingwit.homework_24.service.HouseService;
+import pingwit.homework_24_and_25.dto.HouseDto;
+import pingwit.homework_24_and_25.entity.HouseType;
+import pingwit.homework_24_and_25.service.HouseService;
 
 import java.util.List;
 

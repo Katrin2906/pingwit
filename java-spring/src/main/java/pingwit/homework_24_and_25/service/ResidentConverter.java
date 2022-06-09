@@ -1,8 +1,8 @@
-package pingwit.homework_24.service;
+package pingwit.homework_24_and_25.service;
 
 import org.springframework.stereotype.Component;
-import pingwit.homework_24.dto.ResidentDto;
-import pingwit.homework_24.entity.Resident;
+import pingwit.homework_24_and_25.dto.ResidentDto;
+import pingwit.homework_24_and_25.entity.Resident;
 
 import java.util.List;
 

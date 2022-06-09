@@ -1,9 +1,9 @@
-package pingwit.homework_24.service;
+package pingwit.homework_24_and_25.service;
 
 import org.springframework.stereotype.Component;
-import pingwit.homework_24.dto.ElevatorDto;
-import pingwit.homework_24.entity.Elevator;
-import pingwit.homework_24.entity.House;
+import pingwit.homework_24_and_25.dto.ElevatorDto;
+import pingwit.homework_24_and_25.entity.Elevator;
+import pingwit.homework_24_and_25.entity.House;
 
 import java.util.List;
 
