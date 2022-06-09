@@ -28,14 +28,19 @@ public class HouseController {
         return houseService.findAllByHouseType(houseType);
     }
 
+    @GetMapping("/{id}")
+    public HouseDto findAllByHouseType(@PathVariable Long id) {
+        return houseService.findById(id);
+    }
+
+
     @GetMapping("/id")
     public List<HouseDto> findAllByHouseType(@RequestParam List<Long> ids) {
         return houseService.findAllByHouseType(ids);
     }
 
     @GetMapping("/search")
-    // findAllByHouseType думаю название метода стоит сделать как и у сервиса
-    public List<HouseDto> findAllByHouseType(@RequestParam HouseType houseType, @RequestParam List<Long> ids) {
+    public List<HouseDto> findAllByHouseTypeAndIdIn(@RequestParam HouseType houseType, @RequestParam List<Long> ids) {
         return houseService.findAllByHouseTypeAndIdIn(houseType, ids);
     }
 

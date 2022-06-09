@@ -19,10 +19,15 @@ public class HouseService {
         this.houseRepository = houseRepository;
     }
 
+    public HouseDto findById(Long id) {
+        return houseRepository.findById(id)
+                .map(houseConverter::toFront)
+                .orElse(null);
+    }
+
     public Long save(HouseDto dto) {
         House house = houseConverter.toLocal(dto);
         return houseRepository.save(house).getId();
-// лишняя строка
     }
 
     public List<HouseDto> findAllByHouseType(HouseType houseType) {
