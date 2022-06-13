@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import pingwit.homework_22.dto.UserEmailDto;
 import pingwit.homework_22.property.UserEmailProperty;
 
-@Service
+//@Service
 public class UserEmailService {
 
     private final JavaMailSender javaMailSender;

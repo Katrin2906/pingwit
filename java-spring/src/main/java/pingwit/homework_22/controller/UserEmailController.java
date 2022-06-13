@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 import pingwit.homework_22.dto.UserEmailDto;
 import pingwit.homework_22.service.UserEmailService;
 
-@RestController
-@RequestMapping("/email")
+//@RestController
+//@RequestMapping("/email")
 public class UserEmailController {
 
     private final UserEmailService emailService;
