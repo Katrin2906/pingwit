@@ -21,14 +21,14 @@ public class Dock {
     public void work() throws InterruptedException {
 
         locker.lock();
-        try {
-           // while (waitingTime = BoatTypes.BIG_BOAT || waitingTime = BoatTypes.MIDDLE_BOAT || waitingTime = BoatTypes.LITTLE_BOAT) {
-                condition.await();
-                System.out.println("Full boat");
-                condition.signalAll();
-      //      }
-      //  } catch (InterruptedException e) {
-     //       e.printStackTrace();
-     //   }
-  //  }
-// }
+//        try {
+//            while (waitingTime = BoatTypes.BIG_BOAT || waitingTime = BoatTypes.MIDDLE_BOAT || waitingTime = BoatTypes.LITTLE_BOAT) {
+//                condition.await();
+//                System.out.println("Full boat");
+//                condition.signalAll();
+//            }
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+    }
+ }

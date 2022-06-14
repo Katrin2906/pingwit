@@ -35,7 +35,7 @@ public class Counting {
           Для этого можно сложить все новые потоки в коллекцию или использовать какой-нибудь ExecutorService
             */
 
-            filesList.forEach(() -> filesList.countFile; //не совсем понимаю, почему не могу его тут вызвать
+//            filesList.forEach(() -> filesList.con; //не совсем понимаю, почему не могу его тут вызвать
         }
     }
 }
