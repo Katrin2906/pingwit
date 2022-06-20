@@ -10,7 +10,7 @@ public class Tonometr {
     private String producer;
     private Integer modelNumber;
 
-    public Tonometr(Long id, String producer, Integer modelNumber) {
+    public Tonometr(Long id, String producer, Integer modelNumber) { // т.к. это @Entity, то должен быть конструктор без аргументов
         this.id = id;
         this.producer = producer;
         this.modelNumber = modelNumber;
