@@ -9,8 +9,8 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private List<Tonometr> tonometrs = new ArrayList<>();
-    public Order(Long id, List<Tonometr> tonometrs) {
+    private List<Tonometr> tonometrs = new ArrayList<>(); // абзац
+    public Order(Long id, List<Tonometr> tonometrs) { // т.к. это @Entity, то должен быть конструктор без аргументов
         this.id = id;
         this.tonometrs = tonometrs;
     }
