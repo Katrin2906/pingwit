@@ -3,7 +3,7 @@ package pingwit.homework_29.service;
 import org.springframework.stereotype.Component;
 import pingwit.homework_29.entity.Order;
 
-@Component
+@Component // OrderTonometrService - если окончание названия Service, то @Service
 public class OrderTonometrService {
 
     public String orderTonomert() {
