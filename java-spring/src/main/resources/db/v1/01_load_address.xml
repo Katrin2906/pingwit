@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <changeSet author="karku" id="01_load_address">
+        <loadData catalogName="cat"
+                  file="01_load_address.csv"
+                  relativeToChangelogFile="true"
+                  schemaName="public"
+                  separator=","
+                  tableName="address"
+                  usePreparedStatements="true">
+            <column index="0"
+                    name="id"
+                    type="skip"/>
+            <column index="1"
+                    name="city"/>
+            <column index="2"
+                    name="street"/>
+            <column index="3"
+                    name="number"/>
+
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

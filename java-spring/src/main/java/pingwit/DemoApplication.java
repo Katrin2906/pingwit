@@ -7,11 +7,11 @@ import pingwit.homework_22.property.UserEmailProperty;
 
 @SpringBootApplication
 @EnableConfigurationProperties({
-		UserEmailProperty.class})
+        UserEmailProperty.class})
 public class DemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
 
 }

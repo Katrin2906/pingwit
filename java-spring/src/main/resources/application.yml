@@ -1,10 +1,13 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/pingwit-java-1
+    url: jdbc:postgresql://localhost:5432/pingwit-java-1_3
     username: postgres
     password: docker
   jpa:
     show-sql:true
+  liquibase:
+    change-log: "classpath:db/changelog.xml"
+    enabled: true
   mail:
     host: smtp.gmail.com
     port: 587
