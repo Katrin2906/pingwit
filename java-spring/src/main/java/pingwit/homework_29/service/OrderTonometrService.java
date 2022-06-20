@@ -8,7 +8,7 @@ public class OrderTonometrService {
 
     public String orderTonomert() {
         Order order = new Order();
-        order.setId();
+        order.setId(); // почему метод с названием setId() без аргументов?
         return "order created";
     }
 }
