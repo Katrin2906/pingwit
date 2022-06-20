@@ -28,11 +28,11 @@ public class OrderController {
     }
 
     @PostConstruct
-    public void init() {
+    public void init() { // содержимое метода лучше поместить в конструктор
         TONOMETR_MAP.put(1L, new Tonometr(1L, MICROLIFE.name(), 13));
         TONOMETR_MAP.put(2L, new Tonometr(2L, OMRON.name(), 112));
         TONOMETR_MAP.put(3L, new Tonometr(3L, MICROLIFE.name(), 116));
-        ATOMIC_LONG = new AtomicLong(TONOMETR_MAP.size());
+        ATOMIC_LONG = new AtomicLong(TONOMETR_MAP.size()); // у тебя начальное значение будет равно 3, зачем? 
     }
 
     @PostMapping("/order")
@@ -42,6 +42,6 @@ public class OrderController {
 
     @GetMapping("/order/most_popular")
     public Tonometr popular() {
-        return TONOMETR_MAP.get(2L);
+        return TONOMETR_MAP.get(2L); // зачем хардкодить 2L, а не передавать аргументом в виде PathVariable или RequestParam?
     }
 }
