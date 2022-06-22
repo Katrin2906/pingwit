@@ -1,6 +1,9 @@
 package pingwit.homework_29.entity;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Tonometr {
@@ -10,7 +13,7 @@ public class Tonometr {
     private String producer;
     private Integer modelNumber;
 
-    public Tonometr(Long id, String producer, Integer modelNumber) { // т.к. это @Entity, то должен быть конструктор без аргументов
+    public Tonometr(Long id, String producer, Integer modelNumber) {
         this.id = id;
         this.producer = producer;
         this.modelNumber = modelNumber;

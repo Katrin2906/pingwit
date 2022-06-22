@@ -1,6 +1,6 @@
 package pingwit.homework_29.entity;
 
-public enum Producer { // Producer -> TonometrProducer
+public enum TonometrProducer {
     OMRON,
     MICROLIFE,
     HARTMANN

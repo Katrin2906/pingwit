@@ -9,26 +9,22 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import pingwit.homework_29.dto.TonometrDto;
 
 import static org.mockito.Mockito.when;
-import static pingwit.homework_29.entity.Producer.MICROLIFE;
+import static pingwit.homework_29.entity.TonometrProducer.MICROLIFE;
 
 @ExtendWith(SpringExtension.class)
 class OrderServiceTest {
-    @Mock
-    private final OrderTonometrService orderTonometrService;
-    @InjectMocks
-    private final OrderService subject;
 
-    OrderServiceTest(OrderTonometrService orderTonometrService, OrderService subject) {
-        this.orderTonometrService = orderTonometrService;
-        this.subject = subject;
-    }
+    @Mock
+    private TonometrOrderService tonometrOrderService;
+    @InjectMocks
+    private OrderService subject;
 
     @Test
     void makeOrder() {
         //Given
         TonometrDto tonometrDto = new TonometrDto(2L, MICROLIFE.name(), 234);
         String expected = "2L MICROLIFE 234";
-        when(orderTonometrService.orderTonomert().thenReturn(expected));
+        when(tonometrOrderService.orderTonometr()).thenReturn(expected);
         //When
         String actual = subject.makeOrder(tonometrDto);
         //Then

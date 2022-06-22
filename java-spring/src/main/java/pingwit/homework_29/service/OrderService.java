@@ -5,13 +5,13 @@ import pingwit.homework_29.dto.TonometrDto;
 
 @Service
 public class OrderService {
-    private final OrderTonometrService orderTonometrService;
+    private final TonometrOrderService tonometrOrderService;
 
-    public OrderService(OrderTonometrService orderTonometrService) {
-        this.orderTonometrService = orderTonometrService;
+    public OrderService(TonometrOrderService tonometrOrderService) {
+        this.tonometrOrderService = tonometrOrderService;
     }
 
     public String makeOrder(TonometrDto dto) {
-        return orderTonometrService.orderTonomert();
+        return tonometrOrderService.orderTonometr();
     }
 }
