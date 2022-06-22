@@ -31,14 +31,14 @@ class OrderControllerIT {
         //Given
         String path = "/tonometr/order";
 
-        TonometrDto tonometrDto = new TonometrDto(3L, OMRON.name(), 1234);
+        TonometrDto tonometrDto = new TonometrDto(2L, OMRON.name(), 112);
 
         MockHttpServletRequestBuilder order = MockMvcRequestBuilders
                 .post(path)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(tonometrDto));
 
-        String expected = "3L OMRON 1234";
+        String expected = "pingwit.homework_29.entity.TonometrOrder";
         //When
         MvcResult mvcResult = mockMvc.perform(order)
                 .andExpect(MockMvcResultMatchers.status().is2xxSuccessful())
@@ -55,7 +55,7 @@ class OrderControllerIT {
                 .get(path)
                 .contentType(MediaType.APPLICATION_JSON);
 
-        String expected = "OMRON";
+        String expected = "pingwit.homework_29.entity.Tonometr";
         //When
         MvcResult mvcResult = mockMvc.perform(getPopular)
                 .andExpect(MockMvcResultMatchers.status().is2xxSuccessful())

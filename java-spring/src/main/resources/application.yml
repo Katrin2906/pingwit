@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/pingwit-java-1_3
+    url: jdbc:postgresql://localhost:5432/pingwit-java-1
     username: postgres
     password: docker
   jpa:
