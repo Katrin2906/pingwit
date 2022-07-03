@@ -1,9 +1,11 @@
 package pingwit.homework_29.controller;
 
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import pingwit.homework_29.dto.TonometrDto;
 import pingwit.homework_29.entity.Tonometr;
 import pingwit.homework_29.service.OrderService;
+import pingwit.homework_29.validation.BaseInfo;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,7 +30,7 @@ public class OrderController {
     }
 
     @PostMapping("/order")
-    public String makeOrder(@RequestBody TonometrDto tonometrDto) {
+    public String makeOrder(@RequestBody @Validated(BaseInfo.class) TonometrDto tonometrDto) {
         return orderService.makeOrder(tonometrDto);
     }
 

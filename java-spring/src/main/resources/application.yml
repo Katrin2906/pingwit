@@ -1,8 +1,17 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/pingwit-java-1
+    url: jdbc:postgresql://localhost:5432/cosmetology
     username: postgres
     password: docker
+
+  server:
+    error:
+      include-message: always
+      include-binding-errors: always
+
+    #management.endpoints.web.exposure.include: health, liquibase, info, beans, loggers
+    #management.endpoints.web.exposure.include: "*"
+
   jpa:
     show-sql:true
   liquibase:

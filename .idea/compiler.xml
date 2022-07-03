@@ -6,14 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="java-core" />
         <module name="java-spring" />
+        <module name="cosmetology" />
+        <module name="java-core" />
         <module name="demo" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cosmetology" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="java-core" options="-parameters" />
       <module name="java-spring" options="-parameters" />

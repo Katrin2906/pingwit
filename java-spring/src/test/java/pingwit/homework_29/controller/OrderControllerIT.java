@@ -44,12 +44,13 @@ class OrderControllerIT {
                 .andExpect(MockMvcResultMatchers.status().is2xxSuccessful())
                 .andReturn();
         //Then
-        Assertions.assertEquals(expected, mvcResult.getResponse().getContentAsString());
+        String actual = mvcResult.getResponse().getContentAsString();
+        Assertions.assertTrue(actual.contains(expected));
     }
 
     @Test
     void popular() throws Exception {
-        //Giwen
+        //Given
         String path = "/tonometr/order/popular";
         MockHttpServletRequestBuilder getPopular = MockMvcRequestBuilders
                 .get(path)

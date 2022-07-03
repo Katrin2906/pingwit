@@ -18,6 +18,7 @@
   <modules>
     <module>java-core</module>
     <module>java-spring</module>
+      <module>cosmetology</module>
   </modules>
 
   <name>pingwit</name>
