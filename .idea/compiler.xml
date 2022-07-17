@@ -7,9 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="java-spring" />
-        <module name="cosmetology" />
-        <module name="java-core" />
         <module name="demo" />
+      </profile>
+      <profile name="Annotation profile for pingwit" enabled="true">
+        <sourceOutputDir name="../java-spring/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../java-spring/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cosmetology" />
       </profile>
     </annotationProcessing>
   </component>

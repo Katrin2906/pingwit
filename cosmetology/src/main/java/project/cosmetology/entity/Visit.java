@@ -1,7 +1,6 @@
 package project.cosmetology.entity;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,8 +9,11 @@ import java.util.List;
 public class Visit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private BigDecimal id;
+    private Long id;
     private LocalDateTime visitDate;
+    @ManyToOne
+    @JoinColumn(name = "person_id")
+    private Person person;
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "visit_id_procedure_id",
@@ -19,15 +21,12 @@ public class Visit {
             inverseJoinColumns = @JoinColumn(name = "procedure_id")
     )
     private List<Procedure> procedures = new ArrayList<>();
-    @ManyToOne
-    @JoinColumn(name = "person_id")
-    private Person person;
 
-    public BigDecimal getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(BigDecimal id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

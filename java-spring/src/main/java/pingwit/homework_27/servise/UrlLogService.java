@@ -21,6 +21,6 @@ public class UrlLogService {
         urlLog.setUrl(requestURI);
         urlLog.setRequestDate(LocalDateTime.now());
 
-        urlLogRepository.save(urlLog);
+//        urlLogRepository.save(urlLog);
     }
 }

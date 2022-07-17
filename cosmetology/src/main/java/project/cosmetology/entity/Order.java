@@ -1,14 +1,19 @@
 package project.cosmetology.entity;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private BigDecimal id;
+    private Long id;
+    @ManyToOne
+    @JoinColumn(name = "person_id")
+    private Person person;
+    @Enumerated(EnumType.STRING)
+    private OrderStatus orderStatus;
+
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "product_id_order_id",
@@ -16,17 +21,12 @@ public class Order {
             inverseJoinColumns = @JoinColumn(name = "product_id")
     )
     private List<Product> products = new ArrayList<>();
-    @ManyToOne
-    @JoinColumn(name = "person_id")
-    private Person person;
-    @Enumerated(EnumType.STRING)
-    private OrderStatus orderStatus;
 
-    public BigDecimal getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(BigDecimal id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

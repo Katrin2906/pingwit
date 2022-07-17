@@ -2,26 +2,28 @@ package project.cosmetology.entity;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Procedure {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private BigDecimal id;
+    private Long id;
     private String procedureName;
     private String description;
     @ManyToOne
     @JoinColumn(name = "employee_id")
     private Employee employee;
-    private Double procedurePrice;
+    private BigDecimal price;
     @ManyToMany(mappedBy = "procedure")
-    private Visit visit;
+    private List<Visit> visits = new ArrayList<>();
 
-    public BigDecimal getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(BigDecimal id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -49,19 +51,19 @@ public class Procedure {
         this.employee = employee;
     }
 
-    public Double getProcedurePrice() {
-        return procedurePrice;
+    public BigDecimal getPrice() {
+        return price;
     }
 
-    public void setProcedurePrice(Double procedurePrice) {
-        this.procedurePrice = procedurePrice;
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 
-    public Visit getVisit() {
-        return visit;
+    public List<Visit> getVisits() {
+        return visits;
     }
 
-    public void setVisit(Visit visit) {
-        this.visit = visit;
+    public void setVisits(List<Visit> visits) {
+        this.visits = visits;
     }
 }

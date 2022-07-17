@@ -26,7 +26,6 @@ public class HouseConverter {
     }
 
     public HouseDto toFront(House house) {
-// эту строку можно убрать
         AddressDto addressDto = addressConverter.toFront(house.getAddress());
         List<ElevatorDto> elevatorDtos = elevatorConverter.toFront(house.getElevators());
         List<ResidentDto> residentDtos = residentConverter.toFront(house.getResidents());
@@ -35,7 +34,6 @@ public class HouseConverter {
     }
 
     public House toLocal(HouseDto dto) {
-// эту строку можно убрать
         Address address = addressConverter.toLocal(dto.address());
         List<Resident> residents = residentConverter.toLocal(dto.residents());
 

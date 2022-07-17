@@ -2,25 +2,27 @@ package project.cosmetology.entity;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private BigDecimal id;
+    private Long id;
     private String productName;
     private Double volume;
-    private Double productPrice;
+    private BigDecimal price;
     private String compound;
     private String producer;
     @ManyToMany(mappedBy = "product")
-    private Order order;
+    private List<Order> orders = new ArrayList<>();
 
-    public BigDecimal getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(BigDecimal id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -40,12 +42,12 @@ public class Product {
         this.volume = volume;
     }
 
-    public Double getProductPrice() {
-        return productPrice;
+    public BigDecimal getPrice() {
+        return price;
     }
 
-    public void setProductPrice(Double productPrice) {
-        this.productPrice = productPrice;
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 
     public String getCompound() {
@@ -64,11 +66,11 @@ public class Product {
         this.producer = producer;
     }
 
-    public Order getOrder() {
-        return order;
+    public List<Order> getOrders() {
+        return orders;
     }
 
-    public void setOrder(Order order) {
-        this.order = order;
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 }

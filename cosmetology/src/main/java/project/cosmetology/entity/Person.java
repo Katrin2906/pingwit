@@ -1,7 +1,6 @@
 package project.cosmetology.entity;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,24 +8,24 @@ import java.util.List;
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private BigDecimal id;
+    private Long id;
     private String name;
-    private String sex;
+    private String gender;
     private Integer age;
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "note_id", referencedColumnName = "id")
-    private Note notes;
-    private String telephoneNumbers;
+    @JoinColumn(name = "note_id")
+    private Note note;
+    private String number;
     @OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
     private List<Order> orders = new ArrayList<>();
     @OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
     private List<Visit> visits = new ArrayList<>();
 
-    public BigDecimal getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(BigDecimal id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -38,12 +37,12 @@ public class Person {
         this.name = name;
     }
 
-    public String getSex() {
-        return sex;
+    public String getGender() {
+        return gender;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public Integer getAge() {
@@ -54,20 +53,20 @@ public class Person {
         this.age = age;
     }
 
-    public Note getNotes() {
-        return notes;
+    public Note getNote() {
+        return note;
     }
 
-    public void setNotes(Note notes) {
-        this.notes = notes;
+    public void setNote(Note note) {
+        this.note = note;
     }
 
-    public String getTelephoneNumbers() {
-        return telephoneNumbers;
+    public String getNumber() {
+        return number;
     }
 
-    public void setTelephoneNumbers(String telephoneNumbers) {
-        this.telephoneNumbers = telephoneNumbers;
+    public void setNumber(String number) {
+        this.number = number;
     }
 
     public List<Order> getOrders() {
